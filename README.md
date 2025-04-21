@@ -39,21 +39,21 @@ This project demonstrates how to implement Authentication and Role-Based Authori
  ## Installation
 
 1. Clone the repository:
-   git clone 
+   git clone https://github.com/CodeSoulSolutions/angular-jwt-demo.git
    cd angular-auth-demo
    
 
-2. Install dependencies:
+3. Install dependencies:
    npm install
    ng add @angular/material 
    npm install jwt-decode  
    
 
-3. Run the application:
+4. Run the application:
    ng serve
    
 
-4. Open the application:
+5. Open the application:
    Navigate to `http://localhost:4200` in your browser.
 
 
