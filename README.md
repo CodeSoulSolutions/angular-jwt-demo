@@ -1,27 +1,70 @@
-# AngularAuthDemo
+# Angular JWT Demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
+This project demonstrates how to implement Authentication and Role-Based Authorization in an Angular application using JWT (JSON Web Tokens). It covers the following features:
 
-## Development server
+1. JWT Authentication: Users can log in and receive a JWT token.
+2. Role-Based Authorization: Restrict access to certain routes based on the user's role (e.g., `admin` or `user`).
+3. Auth Guards: Protect routes from unauthorized access.
+4. HTTP Interceptors: Automatically attach the JWT token to outgoing requests.
+5. Signals: Use Angular Signals for reactive state management.
+6. Custom Pipes: Transform data in templates using custom pipes.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
 
-## Build
+ 1. JWT Authentication
+- Users can log in with a username and password.
+- A fake JWT token is generated and stored in `localStorage`.
+- The token is used to authenticate subsequent requests.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+ 2. Role-Based Authorization
+- Users have roles (`admin` or `user`).
+- Certain routes (e.g., `/admin-dashboard`) are restricted to users with the `admin` role.
+- If a user without the required role tries to access a restricted route, they are redirected to a Forbidden page.
 
-## Running unit tests
+ 3. Auth Guards
+- Routes are protected using Angular's `CanActivate` guards.
+- The `authGuard` checks if the user is authenticated and has the required role.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ 4. HTTP Interceptors
+- An HTTP interceptor automatically attaches the JWT token to outgoing requests.
 
-## Running end-to-end tests
+ 5. Signals
+- Angular Signals are used to manage the authentication state and user role reactively.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+ 6. Custom Pipes
+- A custom pipe (`truncate`) is used to truncate long strings in templates.
 
-## Further help
+ ## Installation
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Clone the repository:
+   git clone 
+   cd angular-auth-demo
+   
+
+2. Install dependencies:
+   npm install
+   ng add @angular/material 
+   npm install jwt-decode  
+   
+
+3. Run the application:
+   ng serve
+   
+
+4. Open the application:
+   Navigate to `http://localhost:4200` in your browser.
+
+
+
+## Usage
+
+ 1. Login
+- Use the following credentials to log in:
+  - Admin:
+    - Username: `admin`
+    - Password: `admin123`
+  - User:
+    - Username: `user`
+    - Password: `user123`
