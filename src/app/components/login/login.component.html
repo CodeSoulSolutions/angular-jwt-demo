@@ -1,0 +1,38 @@
+<div class="login-container">
+    <h3>{{ title }}</h3>
+    <mat-card class="login-card" appearance="outlined">
+        <mat-card-header>
+            <mat-card-title>Login</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Username</mat-label>
+                    <mat-icon matPrefix>person</mat-icon>
+                    <input matInput formControlName="username" placeholder="Enter username" />
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Password</mat-label>
+                    <mat-icon matPrefix>lock</mat-icon>
+                    <input matInput type="password" formControlName="password" placeholder="Enter password" />
+                </mat-form-field>
+
+                <button mat-flat-button color="primary" type="submit" [disabled]="loginForm.invalid" class="full-width">
+                    <mat-icon>login</mat-icon>
+                    Login
+                </button>
+            </form>
+
+            <p *ngIf="errorMessage" class="error-message">
+                <mat-icon color="warn">error</mat-icon>
+                {{ errorMessage }}
+            </p>
+        </mat-card-content>
+    </mat-card>
+
+    <div class="login-footer">
+        <p>Powered by <a href="https://www.codesoul.solutions/" target="_blank">CodeSoul Solutions</a></p>
+    </div>
+</div>

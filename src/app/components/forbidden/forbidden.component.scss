@@ -1,0 +1,22 @@
+.forbidden-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.forbidden-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+
+    h2 {
+        margin-top: 0.5rem;
+        font-weight: 500;
+        color: #d32f2f;
+    }
+
+    p {
+        font-size: 1rem;
+        color: #555;
+    }
+}

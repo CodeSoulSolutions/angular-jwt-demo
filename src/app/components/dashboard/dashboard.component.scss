@@ -1,0 +1,29 @@
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.dashboard-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+
+  .username {
+    color: #3f51b5;
+    font-weight: 600;
+  }
+
+  mat-card-content p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #444;
+  }
+
+  .dashboard-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}
