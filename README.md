@@ -39,21 +39,29 @@ This project demonstrates how to implement Authentication and Role-Based Authori
  ## Installation
 
 1. Clone the repository:
+
    git clone https://github.com/CodeSoulSolutions/angular-jwt-demo.git
+   
    cd angular-auth-demo
+
    
 
 3. Install dependencies:
+
    npm install
-   ng add @angular/material 
-   npm install jwt-decode  
+   
+   ng add @angular/material
+   
+   npm install jwt-decode
+   
    
 
-4. Run the application:
+5. Run the application:
+
    ng serve
    
 
-5. Open the application:
+7. Open the application:
    Navigate to `http://localhost:4200` in your browser.
 
 
@@ -68,3 +76,19 @@ This project demonstrates how to implement Authentication and Role-Based Authori
   - User:
     - Username: `user`
     - Password: `user123`
+
+
+  ## Troubleshooting
+
+ 1. JWT Token Not Working
+- Ensure the token includes the required claims (e.g., `role`).
+- Check the `jwtDecode` function to ensure it correctly extracts the role.
+
+ 2. Role-Based Authorization Not Working
+- Verify that the `authGuard` correctly checks the user's role.
+- Ensure the `data: { role: 'admin' }` property is set on the restricted routes.
+
+ 3. Page Reload Loses Authentication
+- Ensure the `restoreAuthState` method in `auth.service.ts` is correctly restoring the authentication state.
+
+
